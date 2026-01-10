@@ -1,0 +1,184 @@
+
+
+ [
+  {
+    "category": "Présentation banque",
+    "question": "Qu’est‑ce que la BDM‑SA ?",
+    "answer": "La BDM‑SA est la Banque de Développement du Mali, une grande banque commerciale offrant divers produits et services bancaires."
+  },
+  {
+    "category": "Présentation banque",
+    "question": "Où est située la BDM‑SA ?",
+    "answer": "La BDM‑SA est située Avenue Modibo Kéita B.P. 94 à Bamako, Mali."
+  },
+  {
+    "category": "Agences et contact",
+    "question": "Quels sont les horaires d’ouverture des agences ?",
+    "answer": "Les agences sont généralement ouvertes du lundi au jeudi de 08h00 à 16h00 et le vendredi jusqu’à midi."
+  },
+  {
+    "category": "Agences et contact",
+    "question": "Comment contacter la banque ?",
+    "answer": "Vous pouvez contacter la BDM‑SA par téléphone au +223 20 22 20 50 ou par e‑mail à info@bdm-sa.com."
+  },
+  {
+    "category": "Comptes bancaires",
+    "question": "Quels types de comptes bancaires proposez‑vous ?",
+    "answer": "La banque propose des comptes chèques, des comptes épargne et des comptes dédiés pour différents profils de clients."
+  },
+  {
+    "category": "Comptes bancaires",
+    "question": "Comment ouvrir un compte à la BDM‑SA ?",
+    "answer": "Pour ouvrir un compte, rendez‑vous en agence avec une pièce d’identité valide et un justificatif de domicile, et suivez la procédure de la banque."
+  },
+  {
+    "category": "Comptes bancaires",
+    "question": "Quels documents sont nécessaires pour ouvrir un compte ?",
+    "answer": "Vous aurez besoin d’une pièce d’identité, d’un justificatif de domicile et d’un dépôt initial selon le type de compte."
+  },
+  {
+    "category": "Cartes bancaires",
+    "question": "Quelles cartes bancaires offrez‑vous ?",
+    "answer": "BDM‑SA propose notamment la carte Visa Optimum, utilisable pour les retraits et paiements au Mali et à l’international."
+  },
+  {
+    "category": "Cartes bancaires",
+    "question": "Quels sont les frais pour une carte Visa Optimum ?",
+    "answer": "La redevance annuelle pour la carte Visa Optimum est autour de 20 000 FCFA, avec d’autres frais selon les services utilisés."
+  },
+  {
+    "category": "Cartes bancaires",
+    "question": "Puis‑je utiliser ma carte à l’étranger ?",
+    "answer": "Oui, certaines cartes comme la Visa Optimum sont utilisables à l’étranger sur le réseau Visa."
+  },
+  {
+    "category": "Cartes bancaires",
+    "question": "Que faire si ma carte est perdue ou volée ?",
+    "answer": "Contactez immédiatement votre agence pour faire opposition et demander un renouvellement de votre carte."
+  },
+  {
+    "category": "Services financiers",
+    "question": "Offrez‑vous des services de transfert d’argent ?",
+    "answer": "Oui, la BDM‑SA propose des services de transfert rapide d’argent via guichets automatiques et en agence."
+  },
+  {
+    "category": "Services financiers",
+    "question": "Quels services disponibles sur les distributeurs automatiques ?",
+    "answer": "Les guichets BDM‑SA permettent des virements, des recharges prépayées et des mises à disposition d’argent."
+  },
+  {
+    "category": "Services financiers",
+    "question": "Qu’est‑ce que le service de recharge prépayée ?",
+    "answer": "C’est un service qui permet de recharger la carte d’un autre client directement depuis un guichet automatique BDM."
+  },
+  {
+    "category": "Services financiers",
+    "question": "Qu’est‑ce que le service Mise à Disposition ?",
+    "answer": "Ce service permet à un client d’envoyer de l’argent à une personne qui n’a pas de compte ou de carte bancaire."
+  },
+  {
+    "category": "Services digitaux",
+    "question": "Proposez‑vous des services d’e‑banking ?",
+    "answer": "Oui, BDM‑SA offre des services d’e‑banking comme BDM Net ou Cauris‑Web pour la gestion des comptes en ligne."
+  },
+  {
+    "category": "Services digitaux",
+    "question": "Quels services sont disponibles en ligne ?",
+    "answer": "Via l’e‑banking, vous pouvez consulter votre solde, vos opérations et télécharger des relevés."
+  },
+  {
+    "category": "Services digitaux",
+    "question": "Puis‑je consulter mon solde en ligne ?",
+    "answer": "Oui, avec BDM Net ou Cauris‑Web, vous pouvez consulter votre solde et vos opérations 24/7."
+  },
+  {
+    "category": "Crédits et prêts",
+    "question": "Quels types de crédits proposez‑vous ?",
+    "answer": "BDM‑SA propose des crédits personnels, professionnels et pour projets spécifiques selon l’étude de dossier."
+  },
+  {
+    "category": "Crédits et prêts",
+    "question": "Comment faire une demande de crédit ?",
+    "answer": "Rendez‑vous en agence avec les documents requis pour soumettre votre demande de crédit."
+  },
+  {
+    "category": "Crédits et prêts",
+    "question": "Puis‑je rembourser mon crédit par anticipation ?",
+    "answer": "Oui, en général le remboursement anticipé est possible selon les conditions de votre contrat de crédit."
+  },
+  {
+    "category": "Agences et contact",
+    "question": "Où trouver une agence proche de moi ?",
+    "answer": "Consultez la section « Nos agences » sur le site officiel pour les adresses complètes des agences locales."
+  },
+  {
+    "category": "Agences et contact",
+    "question": "Quels sont les numéros de téléphone des agences ?",
+    "answer": "Les numéros varient selon l’agence. Veuillez consulter directement la page des agences ou appeler le service client."
+  },
+  {
+    "category": "Services digitaux",
+    "question": "Proposez‑vous des services SMS alertes ?",
+    "answer": "Oui, un service d’alertes SMS est disponible pour informer le client des mouvements sur le compte."
+  },
+  {
+    "category": "Services digitaux",
+    "question": "Puis‑je prendre rendez‑vous en agence ?",
+    "answer": "Oui, vous pouvez prendre rendez‑vous soit par appel téléphonique soit en vous rendant directement en agence."
+  },
+  {
+    "category": "Services digitaux",
+    "question": "Existe‑t‑il un service mobile banking ?",
+    "answer": "BDM‑SA propose des services bancaires en ligne et mobile pour faciliter la gestion de vos comptes."
+  },
+  {
+    "category": "Sécurité",
+    "question": "Comment sécuriser mon compte en ligne ?",
+    "answer": "Activez les options de sécurité proposées dans l’e‑banking et ne partagez jamais vos identifiants."
+  },
+  {
+    "category": "Services digitaux",
+    "question": "Puis‑je faire des virements en ligne ?",
+    "answer": "Les virements peuvent être effectués via e‑banking selon les services disponibles."
+  },
+  {
+    "category": "Cartes bancaires",
+    "question": "Proposez‑vous une carte internationale pour les clients diaspora ?",
+    "answer": "Oui, des solutions de cartes Visa sont proposées pour les Maliens résidant à l’étranger."
+  },
+  {
+    "category": "Crédits et prêts",
+    "question": "Quels sont les frais pour une opération de virement ?",
+    "answer": "Les frais varient selon le type de virement et peuvent être consultés dans le guide tarifaire ou en agence."
+  },
+  {
+    "category": "Services digitaux",
+    "question": "Puis‑je obtenir un relevé bancaire en ligne ?",
+    "answer": "Oui, via l’e‑banking, vous pouvez télécharger vos relevés de compte."
+  },
+  {
+    "category": "Services financiers",
+    "question": "Offrez‑vous une assurance bancassurance ?",
+    "answer": "La BDM‑SA propose des produits de bancassurance en partenariat avec d’autres assureurs."
+  },
+  {
+    "category": "Services financiers",
+    "question": "Puis‑je faire un retrait dans un guichet automatique ?",
+    "answer": "Oui, vous pouvez retirer de l’argent à partir de votre carte aux guichets automatiques BDM‑SA et partenaires."
+  },
+  {
+    "category": "Cartes bancaires",
+    "question": "Quelles sont les conditions pour une carte prépayée ?",
+    "answer": "Les conditions comprennent l’adhésion à une carte Visa prépayée et les frais associés, disponibles en agence."
+  },
+  {
+    "category": "Services financiers",
+    "question": "Quels services sont sans frais ?",
+    "answer": "Certains services comme la demande de solde sur guichet BDM‑SA peuvent être gratuits ; consultez les conditions tarifaires pour détails."
+  },
+  {
+    "category": "Services digitaux",
+    "question": "Puis‑je effectuer des opérations bancaires sans agence ?",
+    "answer": "Avec l’e‑banking et les services électroniques, de nombreuses opérations peuvent être faites sans se déplacer."
+  }
+]
