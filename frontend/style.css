@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0a2a43, #145c9e);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-container {
+    width: 420px;
+    height: 600px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+header {
+    background: #0a2a43;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header span {
+    font-size: 12px;
+    color: #a8d8ff;
+}
+
+#chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f4f7fb;
+}
+
+.message {
+    max-width: 80%;
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    line-height: 1.4;
+}
+
+.user {
+    background: #145c9e;
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 0;
+}
+
+.bot {
+    background: white;
+    color: #333;
+    margin-right: auto;
+    border-bottom-left-radius: 0;
+}
+
+.suggestions {
+    margin-top: 8px;
+}
+
+.suggestions button {
+    margin: 4px 4px 0 0;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 8px;
+    background: #e0ecf8;
+    cursor: pointer;
+}
+
+.suggestions button:hover {
+    background: #c5def5;
+}
+
+.input-area {
+    display: flex;
+    padding: 10px;
+    background: white;
+    border-top: 1px solid #ddd;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background: #0a2a43;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

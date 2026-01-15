@@ -1,0 +1,79 @@
+[
+  {
+    "session_id": "31a8e144-6e3b-4e04-8123-bdd3d942a430",
+    "question": "Je cherche un crédit",
+    "intent": "credit",
+    "status": "clarification",
+    "timestamp": "2026-01-10T16:06:40.211203"
+  },
+  {
+    "session_id": "65a59c54-276f-4da5-bacd-9985f8eb6278",
+    "question": "Je cherche un crédit",
+    "intent": "credit",
+    "status": "clarification",
+    "timestamp": "2026-01-10T16:08:00.739084"
+  },
+  {
+    "session_id": "eab40221-1b59-471f-96ef-5762d1e84b5d",
+    "question": "salut",
+    "intent": null,
+    "status": "fallback",
+    "timestamp": "2026-01-10T18:09:24.256218"
+  },
+  {
+    "session_id": "eab40221-1b59-471f-96ef-5762d1e84b5d",
+    "question": "Je cherche un crédit",
+    "intent": "credit",
+    "status": "clarification",
+    "timestamp": "2026-01-10T18:10:38.536316"
+  },
+  {
+    "session_id": "eab40221-1b59-471f-96ef-5762d1e84b5d",
+    "question": "Crédit consommation",
+    "intent": "credit",
+    "status": "success",
+    "timestamp": "2026-01-10T18:10:47.701060"
+  },
+  {
+    "session_id": "eab40221-1b59-471f-96ef-5762d1e84b5d",
+    "question": "coucou",
+    "intent": null,
+    "status": "fallback",
+    "timestamp": "2026-01-10T19:59:13.325757"
+  },
+  {
+    "session_id": "eab40221-1b59-471f-96ef-5762d1e84b5d",
+    "question": "oui",
+    "intent": null,
+    "status": "fallback",
+    "timestamp": "2026-01-10T19:59:30.427554"
+  },
+  {
+    "session_id": "b0134c2b-d435-4c7e-8bb2-cdf26ff619c7",
+    "question": "salut",
+    "intent": null,
+    "status": "fallback",
+    "timestamp": "2026-01-15T14:56:30.186644"
+  },
+  {
+    "session_id": "b0134c2b-d435-4c7e-8bb2-cdf26ff619c7",
+    "question": "Je cherche un crédit",
+    "intent": "credit",
+    "status": "clarification",
+    "timestamp": "2026-01-15T14:57:06.911319"
+  },
+  {
+    "session_id": "b0134c2b-d435-4c7e-8bb2-cdf26ff619c7",
+    "question": "Crédit immobilier",
+    "intent": "credit",
+    "status": "success",
+    "timestamp": "2026-01-15T14:57:45.888252"
+  },
+  {
+    "session_id": "35fbb95a-5679-4055-99a1-ead4aa2111e9",
+    "question": "saluttt",
+    "intent": null,
+    "status": "fallback",
+    "timestamp": "2026-01-15T15:35:22.254165"
+  }
+]

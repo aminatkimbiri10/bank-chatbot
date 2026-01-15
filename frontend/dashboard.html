@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard Chatbot BDM-SA</title>
+<style>
+body { font-family: Arial; background:#f4f6f9; padding:30px; }
+.card { background:white; padding:20px; margin-bottom:20px; border-radius:12px; }
+</style>
+</head>
+<body>
+
+<h2>📊 Dashboard Chatbot BDM-SA</h2>
+
+<div class="card" id="stats"></div>
+
+<script>
+fetch("/analytics")
+.then(r => r.json())
+.then(data => {
+  document.getElementById("stats").innerHTML = `
+    <p><b>Total questions :</b> ${data.total_questions}</p>
+    <p><b>Échecs (fallback) :</b> ${data.fallback_count}</p>
+    <p><b>Intentions :</b></p>
+    <pre>${JSON.stringify(data.intent_distribution, null, 2)}</pre>
+  `;
+});
+</script>
+
+</body>
+</html>

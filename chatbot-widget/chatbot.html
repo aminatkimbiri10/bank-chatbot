@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chatbot.css">
+<script src="chatbot.js"></script>
+<script>
+  fetch("chatbot.html")
+    .then(res => res.text())
+    .then(html => document.body.insertAdjacentHTML("beforeend", html));
+</script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="chatbot-button" onclick="toggleChat()">💬</div>
+
+<div id="chatbot-box">
+  <div id="chat-header">
+    Assistant BDM-SA
+    <span onclick="toggleChat()">✕</span>
+  </div>
+
+  <div id="chat-messages"></div>
+
+  <div id="chat-input">
+    <input type="text" id="userInput" placeholder="Posez votre question..." />
+    <button onclick="sendMessage()">Envoyer</button>
+  </div>
+</div>
+
+</body>
+</html>

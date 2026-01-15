@@ -2,3 +2,6 @@ fastapi
 uvicorn
 pydantic 
 requests
+sentence-transformers
+scikit-learn
+numpy

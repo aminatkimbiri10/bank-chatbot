@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BDM Assistant | Startup IA Bancaire</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="chatbot.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <div class="logo">BDM<span>AI</span></div>
+
+    <nav class="nav-links">
+      <a href="#">Accueil</a>
+      <a href="#">Solutions</a>
+      <a href="#">Entreprises</a>
+      <a href="#">À propos</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <!-- DARK MODE TOGGLE -->
+    <button id="theme-toggle" title="Changer de thème">🌙</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-text">
+    <h1>L’assistant bancaire intelligent nouvelle génération</h1>
+    <p>
+      Une plateforme IA conçue pour automatiser, guider et améliorer
+      l’expérience bancaire en Afrique.
+    </p>
+    <div class="hero-buttons">
+      <button class="btn-primary">Demander une démo</button>
+      <button class="btn-secondary">Nos solutions</button>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    <h2>Nos solutions IA</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Assistant IA</h3>
+        <p>Réponses intelligentes 24h/24 pour vos clients.</p>
+      </div>
+      <div class="service-card">
+        <h3>Automatisation</h3>
+        <p>Réduction des coûts du service client.</p>
+      </div>
+      <div class="service-card">
+        <h3>Analytics</h3>
+        <p>Analyse des besoins clients en temps réel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="assistant">
+  <div class="container assistant-box">
+    <h2>Un assistant officiel, fiable et sécurisé</h2>
+    <p>
+      Intégré directement aux sites et applications bancaires,
+      notre assistant IA respecte les standards de sécurité et de conformité.
+    </p>
+  </div>
+</section>
+<div id="chatbot-button" onclick="toggleChat()">💬</div>
+
+<div id="chatbot-box">
+  <div id="chat-header">
+    Assistant BDM-SA
+    <span onclick="toggleChat()">✕</span>
+  </div>
+
+  <div id="chat-messages"></div>
+
+  <div id="chat-input">
+    <input type="text" id="userInput" placeholder="Posez votre question..." />
+    <button onclick="sendMessage()">Envoyer</button>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 BDM AI — Startup IA Bancaire</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="chatbot.js"></script>
+<script>
+fetch("chatbot.html")
+  .then(r => r.text())
+  .then(html => document.body.insertAdjacentHTML("beforeend", html));
+</script>
+
+</body>
+</html>

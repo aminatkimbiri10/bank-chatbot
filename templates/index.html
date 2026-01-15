@@ -1,231 +1,45 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Chatbot BDM-SA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f2f5f8;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .chat-container {
-      width: 550px;
-      max-width: 95%;
-      background-color: #fff;
-      border-radius: 16px;
-      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    .header {
-      background-color: #004080;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-weight: 600;
-      font-size: 1.3rem;
-    }
-
-    #chat {
-      flex: 1;
-      padding: 20px;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      background-color: #f9fafb;
-    }
-
-    .message {
-      max-width: 80%;
-      padding: 12px 16px;
-      border-radius: 16px;
-      word-wrap: break-word;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    .message.user {
-      background-color: #dbeafe;
-      align-self: flex-end;
-      border-bottom-right-radius: 4px;
-    }
-
-    .message.bot {
-      background-color: #e2f0ff;
-      align-self: flex-start;
-      border-bottom-left-radius: 4px;
-    }
-
-    .message .question {
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .footer {
-      display: flex;
-      gap: 8px;
-      padding: 15px;
-      border-top: 1px solid #ddd;
-      background-color: #fff;
-    }
-
-    .footer input[type="text"] {
-      flex: 1;
-      padding: 12px 16px;
-      border-radius: 12px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    .footer select {
-      padding: 12px;
-      border-radius: 12px;
-      border: 1px solid #ccc;
-      font-size: 0.9rem;
-      background-color: #fff;
-    }
-
-    .footer button {
-      padding: 12px 16px;
-      border-radius: 12px;
-      border: none;
-      background-color: #004080;
-      color: white;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .footer button:hover {
-      background-color: #0066cc;
-    }
-
-    #agent {
-      display: none;
-      text-align: center;
-      padding: 8px;
-      color: #004080;
-      cursor: pointer;
-      font-weight: 600;
-      text-decoration: underline;
-      transition: color 0.2s ease;
-    }
-
-    #agent:hover {
-      color: #0066cc;
-    }
-
-    /* Loader */
-    .loader {
-      border: 3px solid #f3f3f3;
-      border-top: 3px solid #004080;
-      border-radius: 50%;
-      width: 16px;
-      height: 16px;
-      animation: spin 1s linear infinite;
-      display: inline-block;
-      margin-right: 8px;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(10px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg);}
-      100% { transform: rotate(360deg);}
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Assistant BDM-SA</title>
+<style>
+body { font-family: Arial; background:#f4f6f9; }
+#chat { width:420px; margin:40px auto; background:#fff; padding:15px; border-radius:12px; }
+.msg { margin:10px 0; padding:10px; border-radius:10px; }
+.user { background:#dbeafe; text-align:right; }
+.bot { background:#e5e7eb; }
+button { margin:5px; padding:8px 12px; border:none; border-radius:8px; background:#004080; color:white; cursor:pointer;}
+</style>
 </head>
 <body>
-  <div class="chat-container">
-    <div class="header">Chatbot BDM-SA</div>
 
-    <div id="chat"></div>
+<div id="chat"></div>
+<input id="q" placeholder="Posez votre question..." style="width:320px">
+<button onclick="send()">Envoyer</button>
 
-    <div class="footer">
-      <input type="text" id="question" placeholder="Posez votre question...">
-      <select id="category">
-        <option value="">Toutes catégories</option>
-        <option value="Présentation banque">Présentation banque</option>
-        <option value="Agences et contact">Agences et contact</option>
-        <option value="Comptes bancaires">Comptes bancaires</option>
-        <option value="Cartes bancaires">Cartes bancaires</option>
-        <option value="Services financiers">Services financiers</option>
-        <option value="Services digitaux">Services digitaux</option>
-        <option value="Crédits et prêts">Crédits et prêts</option>
-        <option value="Sécurité">Sécurité</option>
-      </select>
-      <button onclick="askQuestion()">Envoyer</button>
-    </div>
+<script>
+let sessionId = null;
 
-    <p id="agent" onclick="contactAgent()">Contacter un agent</p>
-  </div>
+async function send(text=null){
+  const q = text || document.getElementById("q").value;
+  document.getElementById("chat").innerHTML += `<div class='msg user'>${q}</div>`;
+  document.getElementById("q").value="";
 
-  <script>
-    const chat = document.getElementById("chat");
+  const res = await fetch(`/chatbot?question=${q}&session_id=${sessionId||""}`);
+  const data = await res.json();
+  sessionId = data.session_id;
 
-    async function askQuestion() {
-      const question = document.getElementById('question').value.trim();
-      const category = document.getElementById('category').value;
-      if(!question) return;
-
-      // Afficher question utilisateur
-      const userDiv = document.createElement("div");
-      userDiv.className = "message user";
-      userDiv.textContent = question;
-      chat.appendChild(userDiv);
-      chat.scrollTop = chat.scrollHeight;
-
-      // Reset input et agent
-      document.getElementById('question').value = "";
-      document.getElementById('agent').style.display = "none";
-
-      // Ajouter loader
-      const loaderDiv = document.createElement("div");
-      loaderDiv.className = "message bot";
-      loaderDiv.innerHTML = '<span class="loader"></span>Le bot réfléchit...';
-      chat.appendChild(loaderDiv);
-      chat.scrollTop = chat.scrollHeight;
-
-      try {
-        const response = await fetch(`/chatbot?question=${encodeURIComponent(question)}&category=${encodeURIComponent(category)}`);
-        const data = await response.json();
-
-        loaderDiv.remove();
-
-        // Afficher réponses
-        data.responses.forEach(resp => {
-          const botDiv = document.createElement("div");
-          botDiv.className = "message bot";
-          botDiv.innerHTML = `<div class="question">${resp.question || "Aucune correspondance exacte"}</div>${resp.answer}`;
-          chat.appendChild(botDiv);
-          chat.scrollTop = chat.scrollHeight;
-        });
-
-        if(data.responses.length === 1 && data.responses[0].question === null) {
-          document.getElementById('agent').style.display = "block";
-        }
-
-      } catch(err) {
-        console.error(err);
-      }
+  data.responses.forEach(r=>{
+    document.getElementById("chat").innerHTML += `<div class='msg bot'>${r.answer}</div>`;
+    if(r.suggestions){
+      r.suggestions.forEach(s=>{
+        document.getElementById("chat").innerHTML += `<button onclick="send('${s}')">${s}</button>`;
+      });
     }
+  });
+}
+</script>
 
-    function contactAgent() {
-      alert("Veuillez appeler le service client au +223 20 22 20 50 ou envoyer un email à info@bdm-sa.com");
-    }
-  </script>
 </body>
 </html>

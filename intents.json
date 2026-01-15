@@ -1,0 +1,17 @@
+{
+  "carte": {
+    "keywords": ["carte", "visa", "mastercard"],
+    "clarification": "Quel type de carte souhaitez-vous ?",
+    "suggestions": ["Carte débit", "Carte prépayée", "Carte internationale"]
+  },
+  "credit": {
+    "keywords": ["crédit", "prêt"],
+    "clarification": "Quel type de crédit vous intéresse ?",
+    "suggestions": ["Crédit consommation", "Crédit immobilier", "Crédit entreprise"]
+  },
+  "compte": {
+    "keywords": ["compte", "ouvrir"],
+    "clarification": "Quel type de compte souhaitez-vous ouvrir ?",
+    "suggestions": ["Compte personnel", "Compte professionnel"]
+  }
+}
